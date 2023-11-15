@@ -463,7 +463,7 @@ function extractEmails(str) {
  *
  */
 function encodeToRot13(str) {
-  return str.replace(/[a-zA-Z]/g, function (letter) {
+  return str.replace(/[a-zA-Z]/g, function changeLetter(letter) {
     const shift = letter <= 'Z' ? 65 : 97;
     return String.fromCharCode(
       ((letter.charCodeAt(0) - shift + 13) % 26) + shift
